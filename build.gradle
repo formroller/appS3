@@ -26,7 +26,17 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // aws - s3
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+
+    // thumbnail
+    implementation 'net.coobird:thumbnailator:0.4.20'
+
 }
 
 tasks.named('test') {

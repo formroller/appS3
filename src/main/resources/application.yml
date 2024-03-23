@@ -1,1 +1,26 @@
-spring.application.name=apps3
+cloud:
+  aws:
+    credentials:
+      accessKey: ${ACCESS_VALUE}
+      secretKey: ${SECRET_VALUE}
+    s3:
+      bucket: rdstest-s3-bucket
+    region:
+      static: ap-northeast-2
+    stack:
+      auto: false
+
+com:
+  example:
+    apps3:
+      path: /Volumes/Public/Project/Millie/apps3/upload
+#      path: /yj/Users/Img
+  jpeg:
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      location: /Volumes/Public/Project/Millie/apps3/upload
+#      location: /Users/Img
+      maxRequestSize: 30MB
+      maxFileSize: 10MB
